@@ -71,6 +71,12 @@ public enum JSSDKAPI {
     downloadImage,
     /***
      * <a href=
+     * "https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1483682025_enmey"
+     * >图像接口-预览图片接口(iOS适配)</a>
+     */
+    getLocalImgData,
+    /***
+     * <a href=
      * "http://mp.weixin.qq.com/wiki/11/74ad127cc054f6b80759c40f77ec03db.html#.E5.BC.80.E5.A7.8B.E5.BD.95.E9.9F.B3.E6.8E.A5.E5.8F.A3"
      * >音频接口-开始录音接口</a>
      */
@@ -275,7 +281,7 @@ public enum JSSDKAPI {
     /**
      * 图像接口集合
      */
-    public final static JSSDKAPI[] IMAGE_APIS = {chooseImage, previewImage, uploadImage, downloadImage};
+    public final static JSSDKAPI[] IMAGE_APIS = {chooseImage, previewImage, uploadImage, downloadImage, getLocalImgData};
     /**
      * 音频接口集合
      */
