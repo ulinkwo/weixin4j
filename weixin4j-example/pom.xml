@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>weixin4j-example</artifactId>
-    <version>1.0</version>
+    <version>1.0.0</version>
     <packaging>war</packaging>
 
     <name>weixin4j-example</name>
