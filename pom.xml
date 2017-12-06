@@ -222,6 +222,7 @@
             </resource>
         </resources>
     </build>
+
     <profiles>
         <profile>
             <id>release</id>
@@ -242,7 +243,37 @@
                 </plugins>
             </build>
         </profile>
+        <profile>
+            <id>internal-release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                    </plugin>
+                    <!--<plugin>-->
+                    <!--<groupId>org.apache.maven.plugins</groupId>-->
+                    <!--<artifactId>maven-javadoc-plugin</artifactId>-->
+                    <!--</plugin>-->
+                    <!--<plugin>-->
+                    <!--<groupId>org.apache.maven.plugins</groupId>-->
+                    <!--<artifactId>maven-gpg-plugin</artifactId>-->
+                    <!--</plugin>-->
+                </plugins>
+            </build>
+            <distributionManagement>
+                <repository>
+                    <id>maven-releases</id>
+                    <url>https://repo.drplay.me/repository/maven-releases/</url>
+                </repository>
+                <snapshotRepository>
+                    <id>maven-snapshots</id>
+                    <url>https://repo.drplay.me/repository/maven-snapshots/</url>
+                </snapshotRepository>
+            </distributionManagement>
+        </profile>
     </profiles>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -253,6 +284,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
     <distributionManagement>
         <snapshotRepository>
             <id>oss-snapshot</id>
